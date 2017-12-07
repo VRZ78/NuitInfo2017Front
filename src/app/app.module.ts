@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,15 +10,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {APIService} from "../shared/services/APIService.service";
 import {HttpClientModule} from '@angular/common/http';
 import {LoginPage} from "../pages/login/login";
+import {InfosUtilesPage} from "../pages/infos-utiles/infos-utiles";
+import {AlcoolemiePage} from "../pages/alcoolemie/alcoolemie";
+import {SamPage} from "../pages/sam/sam";
+import {TempsReelPage} from "../pages/temps-reel/temps-reel";
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    InfosUtilesPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    AlcoolemiePage,
+    SamPage,
+    TempsReelPage
   ],
   imports: [
     BrowserModule,
@@ -31,11 +33,12 @@ import {LoginPage} from "../pages/login/login";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    SamPage,
+    InfosUtilesPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    AlcoolemiePage,
+    TempsReelPage
   ],
   providers: [
     StatusBar,
