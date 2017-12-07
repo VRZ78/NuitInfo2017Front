@@ -1,3 +1,5 @@
-# npm install -g ionic cordova
-# npm install
-# ionic serve
+# installation
+
+npm install -g ionic cordova
+npm install
+ionic serve
