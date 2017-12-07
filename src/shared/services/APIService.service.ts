@@ -17,11 +17,7 @@ export class APIService {
 
   connect = function (username, password) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.uri + "user/connection", {username : username, password : password}).subscribe((data) => {
-        resolve(data);
-      }, (err) => {
-        reject(err);
-      })
+      resolve()
     });
   };
 
@@ -32,11 +28,7 @@ export class APIService {
    */
   register = function (user : User) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.uri + "user", user).subscribe((data) => {
-        resolve(data);
-      }, (err) => {
-        reject(err);
-      })
+      resolve()
     });
 
   }
