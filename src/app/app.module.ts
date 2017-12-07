@@ -13,6 +13,7 @@ import {LoginPage} from "../pages/login/login";
 import {InfosUtilesPage} from "../pages/infos-utiles/infos-utiles";
 import {AlcoolemiePage} from "../pages/alcoolemie/alcoolemie";
 import {SamPage} from "../pages/sam/sam";
+import {HomePage} from "../pages/home/home";
 import {TempsReelPage} from "../pages/temps-reel/temps-reel";
 
 @NgModule({
@@ -23,7 +24,8 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
     LoginPage,
     AlcoolemiePage,
     SamPage,
-    TempsReelPage
+    TempsReelPage,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
     TabsPage,
     LoginPage,
     AlcoolemiePage,
-    TempsReelPage
+    TempsReelPage,
+    HomePage
   ],
   providers: [
     StatusBar,
