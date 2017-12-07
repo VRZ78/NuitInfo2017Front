@@ -50,6 +50,10 @@
           <ion-label floating>Prénom</ion-label>
           <ion-input [(ngModel)]="registerUser.firstName"></ion-input>
         </ion-item>
+        <ion-item>
+          <ion-label floating>Téléphone</ion-label>
+          <ion-input [(ngModel)]="registerUser.phone"></ion-input>
+        </ion-item>
         <div padding>
           <button ion-button (click)="register()" color="primary" block>S'enregistrer</button>
         </div>
