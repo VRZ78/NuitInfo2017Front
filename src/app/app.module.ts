@@ -14,8 +14,12 @@ import {AlcoolemiePage} from "../pages/alcoolemie/alcoolemie";
 import {SamPage} from "../pages/sam/sam";
 import {HomePage} from "../pages/home/home";
 import {TempsReelPage} from "../pages/temps-reel/temps-reel";
-import { Geolocation } from '@ionic-native/geolocation';
 import { WeatherProvider } from '../providers/weather/weather';
+import { Geolocation } from '@ionic-native/geolocation';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2'; 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthProvider } from '../providers/auth/auth';
 
 
 @NgModule({
@@ -31,7 +35,16 @@ import { WeatherProvider } from '../providers/weather/weather';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp({ 
+    apiKey: "AIzaSyCqQyNMeRS4JkB4JdPxMseGY6ALcIVHmyg",
+    authDomain: "whitewalkers-7da66.firebaseapp.com",
+    databaseURL: "https://whitewalkers-7da66.firebaseio.com",
+    projectId: "whitewalkers-7da66",
+    storageBucket: "whitewalkers-7da66.appspot.com",
+    messagingSenderId: "1078947334217" }), 
+    AngularFireDatabaseModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,8 +61,11 @@ import { WeatherProvider } from '../providers/weather/weather';
     SplashScreen,
       APIService,
       Geolocation,
+      AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WeatherProvider
+    WeatherProvider,
+    AngularFireAuth,
+    AuthProvider
   ]
 })
 export class AppModule {}

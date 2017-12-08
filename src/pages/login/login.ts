@@ -3,6 +3,8 @@ import {APIService} from "../../shared/services/APIService.service";
 import {User} from "../../shared/models/User.model";
 import {NavController, ToastController} from "ionic-angular";
 import {HomePage} from "../home/home";
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @Component({
   templateUrl: 'login.html'
@@ -12,7 +14,7 @@ export class LoginPage implements OnInit{
   user: User;
   registerUser: User;
 
-  constructor(private APISerive : APIService, public navCtrl: NavController, public toastCtrl: ToastController) {
+  constructor(private APISerive : APIService,private authService : AuthProvider, public navCtrl: NavController, public toastCtrl: ToastController) {
 
   }
 
@@ -22,7 +24,7 @@ export class LoginPage implements OnInit{
   }
 
   login = function () {
-    this.APISerive.connect(this.user.username, this.user.password).then(() => {
+    this.authService.login(this.user).then(() => {
       this.navCtrl.push(HomePage);
       }, (err) => {
       let toast = this.toastCtrl.create({

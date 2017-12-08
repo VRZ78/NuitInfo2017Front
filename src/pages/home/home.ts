@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AlcoolemiePage} from "../alcoolemie/alcoolemie";
-
 /**
  * Generated class for the HomePage page.
  *
@@ -71,5 +70,6 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
+
 
 }
