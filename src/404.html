@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" media="screen" href="./style.css" type="text/css"/>
+		<script src="./jquery.js"></script>
+		
+		<title>404 Not Found</title>
+	</head>
+	
+	<body oncontextmenu="return false;">
+		<div class="header">
+			<h1 id="sw">SafeWalkers</h1>
+			<p id="p404">404 - Page Not Found</p>
+		</div>
+
+		<div id="content">
+			<h1 class="advert">Sur la route, tous responsables !</h1>
+			<p class="advert_msg">Tant qu'il y aura des morts, il nous faudra agir avec vous pour une route plus sûre.</p>
+			<button type="button" id="buttonTest" onclick="launchTest()">JE PEUX CONDUIRE</button>
+		</div>
+
+		<div id="testContent">
+			<h1 class="advert">Test d'alcoolémie</h1>
+			<p class="advert_msg">Copiez cette phrase :</h4>
+			<p id="advert_msg_mod">
+				"Ce test doit permettre d'agir avant l'accident en gardant l'esprit de la fête afin que le message soit positif"
+			</p>
+    			<p>
+      				<input id="responseInput" name="name" placeholder="Veuillez recopier la phrase" onpaste="return false;" minlength="2" type="text" size="50" height="50" required>
+    			</p>
+				<button type="button" id="buttonTest" onclick="testDone()">VALIDER LE TEST</button>
+		</div>
+
+		<div id="good">
+			<h1 class="advert">Test validé</h1>
+			<p class="advert_msg">Tu peux conduire, mais n'oublie pas tes responsabilités.</p>
+		</div>
+
+		<div id="bad">
+			<h1 class="advert">Test raté</h1>
+			<p class="advert_msg">Désolé, trouve ton Sam !</p>
+		</div>
+		<script type="text/javascript" src="./js.js"></script>
+	</body>
+
+</html>
