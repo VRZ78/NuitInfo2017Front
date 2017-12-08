@@ -88,7 +88,7 @@
 </ion-content>
 
 <ion-footer no-border>
-  <ion-grid no-padding> 
+  <ion-grid no-padding>
     <ion-toolbar color="primary">
       <ion-row>
         <ion-buttons>
@@ -103,23 +103,23 @@
             <button ion-button icon-only clear color="light">
               <ion-icon name="clock" (click)="goToMap()"></ion-icon>
             </button>
-          </ion-col> 
+          </ion-col>
         </ion-buttons>
-        <ion-buttons end >
+        <ion-buttons end>
           <ion-col col-4>
-            <button ion-button icon-only clear end color="light">
-              <ion-icon name="speedometer"></ion-icon>
-            </button> 
-          </ion-col>  
+            <button ion-button icon-only clear end color="light" (click)="goToInformation()">
+              <ion-icon name="information-circle"></ion-icon>
+            </button>
+          </ion-col>
         </ion-buttons>
         <ion-buttons>
           <ion-col>
             <button ion-button icon-only clear end color="light" (click)="goToCarte()">
                <ion-icon name="map" ></ion-icon>
             </button>
-          </ion-col>  
-        </ion-buttons>  
+          </ion-col>
+        </ion-buttons>
       </ion-row>
     </ion-toolbar>
-  </ion-grid>   
-</ion-footer> 
+  </ion-grid>
+</ion-footer>

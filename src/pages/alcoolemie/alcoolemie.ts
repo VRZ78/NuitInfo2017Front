@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TempsReelPage } from '../temps-reel/temps-reel';
+import { InfosUtilesPage } from "../infos-utiles/infos-utiles";
 @Component({
   selector: 'alcoolemie',
   templateUrl: 'alcoolemie.html'
@@ -26,7 +27,11 @@ export class AlcoolemiePage {
   goToMap(){
       this.navCtrl.push(TempsReelPage);
   }
-  goToCarte(){
+  goToCarte() {
       this.navCtrl.push(TempsReelPage);
   }
+  goToInformation() {
+      this.navCtrl.push(InfosUtilesPage);
+  }
+
 }
