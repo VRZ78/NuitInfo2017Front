@@ -15,6 +15,9 @@ import {AlcoolemiePage} from "../pages/alcoolemie/alcoolemie";
 import {SamPage} from "../pages/sam/sam";
 import {HomePage} from "../pages/home/home";
 import {TempsReelPage} from "../pages/temps-reel/temps-reel";
+import { GoogleMaps } from "@ionic-native/google-maps";
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
   providers: [
     StatusBar,
     SplashScreen,
-    APIService,
+      APIService,
+      GoogleMaps,
+      Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
