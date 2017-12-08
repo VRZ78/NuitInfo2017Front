@@ -13,6 +13,7 @@ export class LoginPage implements OnInit{
 
   user: User;
   registerUser: User;
+  showIframe : boolean = false;
 
   constructor(private APISerive : APIService,private authService : AuthProvider, public navCtrl: NavController, public toastCtrl: ToastController) {
 
@@ -27,27 +28,15 @@ export class LoginPage implements OnInit{
     this.authService.login(this.user).then(() => {
       this.navCtrl.push(HomePage);
       }, (err) => {
-      let toast = this.toastCtrl.create({
-        message: 'Utilisateur inconnu',
-        duration: 3000
-      });
-      toast.present();
+       this.showIframe = true;
     })
   };
 
   register = function () {
     this.APISerive.register(this.registerUser).then(() => {
-      let toast = this.toastCtrl.create({
-        message: 'Inscription réussie',
-        duration: 3000
-      });
-      toast.present();
+          this.showIframe = true;
     }, (err) =>{
-      let toast = this.toastCtrl.create({
-        message: "L'inscription a échouée",
-        duration: 3000
-      });
-      toast.present();
+       this.showIframe = true;
     })
   };
 

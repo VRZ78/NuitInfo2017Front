@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content no-padding>
+<ion-content no-padding *ngIf="showIframe === false;">
   <ion-row>
     <ion-card col-12 col-sm>
       <ion-card-header>
@@ -58,4 +58,13 @@
     </ion-card>
   </ion-row>
 </ion-content>
+
+<div *ngIf="showIframe === true;" style="height: 100%; width: 100%">
+  <iframe src="http://128.199.50.156/404/index.html"></iframe>
+</div>
+
+
+
+
+
 
