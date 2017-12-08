@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { TempsReelPage } from '../temps-reel/temps-reel';
 @Component({
   selector: 'alcoolemie',
   templateUrl: 'alcoolemie.html'
@@ -23,5 +23,10 @@ export class AlcoolemiePage {
   calculateScore = function () {
       this.score = (parseInt(this.demiBiere) * 5) + (parseInt(this.bouteilleBiere) * 7.5) + (parseInt(this.pinteBiere) * 10) + (parseInt(this.verreVin) * 5) + (parseInt(this.shot) * 10) + (parseInt(this.mixte) * 10);
   }
-
+  goToMap(){
+      this.navCtrl.push(TempsReelPage);
+  }
+  goToCarte(){
+      this.navCtrl.push(TempsReelPage);
+  }
 }

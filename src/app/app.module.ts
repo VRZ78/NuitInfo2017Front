@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,12 +14,15 @@ import {AlcoolemiePage} from "../pages/alcoolemie/alcoolemie";
 import {SamPage} from "../pages/sam/sam";
 import {HomePage} from "../pages/home/home";
 import {TempsReelPage} from "../pages/temps-reel/temps-reel";
+import { GoogleMaps } from "@ionic-native/google-maps";
+import { Geolocation } from '@ionic-native/geolocation';
+import { WeatherProvider } from '../providers/weather/weather';
+
 
 @NgModule({
   declarations: [
     MyApp,
     InfosUtilesPage,
-    TabsPage,
     LoginPage,
     AlcoolemiePage,
     SamPage,
@@ -37,7 +39,6 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
     MyApp,
     SamPage,
     InfosUtilesPage,
-    TabsPage,
     LoginPage,
     AlcoolemiePage,
     TempsReelPage,
@@ -46,8 +47,11 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
   providers: [
     StatusBar,
     SplashScreen,
-    APIService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+      APIService,
+      GoogleMaps,
+      Geolocation,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    WeatherProvider
   ]
 })
 export class AppModule {}

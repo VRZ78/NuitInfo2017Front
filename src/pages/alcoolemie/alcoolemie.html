@@ -101,7 +101,7 @@
         <ion-buttons>
           <ion-col col-4>
             <button ion-button icon-only clear color="light">
-              <ion-icon name="person"></ion-icon>
+              <ion-icon name="clock" (click)="goToMap()"></ion-icon>
             </button>
           </ion-col> 
         </ion-buttons>
@@ -112,6 +112,13 @@
             </button> 
           </ion-col>  
         </ion-buttons>
+        <ion-buttons>
+          <ion-col>
+            <button (click)="goToCarte()">
+               <ion-icon name="map" ></ion-icon>
+            </button>
+          </ion-col>  
+        </ion-buttons>  
       </ion-row>
     </ion-toolbar>
   </ion-grid>   
