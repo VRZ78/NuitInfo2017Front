@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
+import {AlcoolemiePage} from "../alcoolemie/alcoolemie";
+
 /**
  * Generated class for the HomePage page.
  *
@@ -63,9 +64,7 @@ export class HomePage {
 			  	];
   }
   goToEvent(link){
-  	alert(link);
-  	console.log(link);
-  	this.navCtrl.push(TabsPage);
+  	this.navCtrl.push(AlcoolemiePage);
   
   }
 

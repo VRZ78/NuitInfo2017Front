@@ -1,5 +1,11 @@
+
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
+  	<ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="menu" (click)="goHome()"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
       Temps Réel
     </ion-title>
@@ -9,3 +15,33 @@
 <ion-content padding>
   Temps Réel
 </ion-content>
+
+<ion-footer no-border>
+	<ion-grid no-padding>	
+		<ion-toolbar color="primary">
+			<ion-row>
+				<ion-buttons>
+					<ion-col col-4>
+						<button ion-button icon-only clear color="light">
+							<ion-icon name="menu"></ion-icon>
+						</button>
+					</ion-col>
+				</ion-buttons>
+				<ion-buttons>
+					<ion-col col-4>
+						<button ion-button icon-only clear color="light">
+							<ion-icon name="person"></ion-icon>
+						</button>
+					</ion-col> 
+				</ion-buttons>
+				<ion-buttons end >
+					<ion-col col-4>
+						<button ion-button icon-only clear end color="light">
+							<ion-icon name="speedometer"></ion-icon>
+						</button>	
+					</ion-col>	
+				</ion-buttons>
+			</ion-row>
+		</ion-toolbar>
+	</ion-grid>   
+</ion-footer> 
