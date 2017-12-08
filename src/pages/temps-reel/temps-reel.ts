@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-<<<<<<< HEAD
 import { LoginPage } from '../login/login';
-=======
+
 import { Geolocation } from '@ionic-native/geolocation';
 
 
->>>>>>> f6ca7c0ada5dbcd50334441a2da02be9dd1a9bda
 @Component({
     selector: 'temps-reel-page',
     templateUrl: 'temps-reel.html'
@@ -19,7 +17,7 @@ export class TempsReelPage {
             this.initMap();
 
         }).catch((error) => {
-            console.log('Error getting location', error);
+            console.log('Error sgetting location', error);
         });
     }
     
@@ -31,15 +29,11 @@ export class TempsReelPage {
         center: { lat: 34.04924594193164, lng: -118.24104309082031 }
     });
 
-<<<<<<< HEAD
-  }
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+	}
+
   goHome(){
   	this.navCtrl.setRoot(LoginPage);
   }
-=======
-    var trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
-}
-
->>>>>>> f6ca7c0ada5dbcd50334441a2da02be9dd1a9bda
 }
