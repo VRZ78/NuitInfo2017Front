@@ -12,13 +12,20 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class TempsReelPage {
     map: any;
+    weatherText: string = "";
+    temp: string = "";
     constructor(public navCtrl: NavController, private geolocation: Geolocation, private weatherProvider: WeatherProvider) {
         this.geolocation.getCurrentPosition().then((resp) => {
           
             this.initMap(resp.coords.latitude, resp.coords.longitude);
 
-            this.weatherProvider.getLocation(resp.coords.latitude, resp.coords.longitude).then((data) => {
-            	console.log(data);
+            this.weatherProvider.getLocation(resp.coords.latitude, resp.coords.longitude).then((data : any) => {
+            	this.weatherProvider.getWeather(data.Key).then((data) => {
+            		this.weatherText = data[0].WeatherText
+            		this.temp = String(data[0].Temperature.Metric.Value)
+            	}, (err) => {
+            		console.log(err);
+            	})
             }, (err) => {
             	console.log(err);
             })

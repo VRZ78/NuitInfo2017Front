@@ -28,7 +28,13 @@ export class WeatherProvider {
   };
 
   getWeather(locationKey) {
-
+	  return new Promise((resolve, reject) => {
+       this.http.get("http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + "?apikey=" + this.apiKey).subscribe((data) => {
+        resolve(data);
+      }, (err) => {
+        reject(err);
+       })
+     });
   }
 
 }
