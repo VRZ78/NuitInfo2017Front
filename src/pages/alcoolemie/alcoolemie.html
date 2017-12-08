@@ -3,10 +3,86 @@
     <ion-title>Alcoolémie</ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content>
+  <ion-row justify-content-center>
+    <h4>Pouvez-vous prendre le volant ?</h4>
+  </ion-row>
+  <ion-row justify-content-center>
+    <h4 style="color: green" *ngIf="score <= 10 && score > 0">Oui ! </h4>
+    <h4 style="color: red" *ngIf="score > 10">Non ! </h4>
+  </ion-row>
+  <ion-row justify-content-center>
+    <button ion-button color="primary" outline (click)="calculateScore()">Calculer</button>
+  </ion-row>
+  <h3>Vin</h3>
+  <ion-row>
+    <ion-col col-7>
+      Combien de verre de vin avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="verreVin"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <h3>Bière</h3>
+  <ion-row>
+    <ion-col col-7>
+      Combien de demi avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="demiBiere"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-7>
+      Combien de pintes avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="pinteBiere"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-7>
+      Combien de bouteilles en verre avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="bouteilleBiere"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 
-<ion-content padding>
-    <ion-row>
-      <button style="height: 17em" col-12 col-sm ion-button>Calculer mon taux d'alcoolémie</button>
-      <button style="height: 17em" col-12 col-sm ion-button>Infos alcoolémie</button>
-    </ion-row>
+  <h3>Alcool fort</h3>
+  <ion-row>
+    <ion-col col-7>
+      Combien de shot avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="shot"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-7>
+      Combien de mélange alcool/soft avez-vous bu ?
+    </ion-col>
+    <ion-col col-5>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="number" [(ngModel)]="mixte"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
 </ion-content>

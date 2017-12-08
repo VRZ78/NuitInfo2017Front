@@ -25,7 +25,7 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
     AlcoolemiePage,
     SamPage,
     TempsReelPage,
-    HomePage
+      HomePage,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +41,7 @@ import {TempsReelPage} from "../pages/temps-reel/temps-reel";
     LoginPage,
     AlcoolemiePage,
     TempsReelPage,
-    HomePage
+      HomePage,
   ],
   providers: [
     StatusBar,
