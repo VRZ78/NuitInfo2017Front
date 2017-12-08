@@ -14,33 +14,33 @@ export class TempsReelPage {
     map: any;
     constructor(public navCtrl: NavController, private geolocation: Geolocation, private weatherProvider: WeatherProvider) {
         this.geolocation.getCurrentPosition().then((resp) => {
-          
+
             this.initMap(resp.coords.latitude, resp.coords.longitude);
 
             this.weatherProvider.getLocation(resp.coords.latitude, resp.coords.longitude).then((data) => {
-            	console.log(data);
+                console.log(data);
             }, (err) => {
-            	console.log(err);
+                console.log(err);
             })
 
         }).catch((error) => {
             console.log('Error sgetting location', error);
         });
     }
-    
- 
+
+
 
     initMap(lat, long) {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: { lat: lat, lng: long }
-    });
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: { lat: lat, lng: long }
+        });
 
-    var trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
-	}
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+    }
 
-  goHome(){
-  	this.navCtrl.setRoot(LoginPage);
-  }
+    goHome() {
+        this.navCtrl.setRoot(LoginPage);
+    }
 }
